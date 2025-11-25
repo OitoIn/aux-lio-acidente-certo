@@ -8,6 +8,7 @@ import { FAQSection } from "@/components/FAQSection";
 import { FormSection } from "@/components/FormSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -29,6 +30,7 @@ const Index = () => {
       <FormSection />
       <FinalCTASection onCtaClick={scrollToForm} />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
