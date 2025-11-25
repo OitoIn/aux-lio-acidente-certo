@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { BenefitSection } from "@/components/BenefitSection";
 import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
@@ -6,6 +7,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FormSection } from "@/components/FormSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -17,6 +19,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Header />
       <HeroSection onCtaClick={scrollToForm} />
       <BenefitSection />
       <ProblemSolutionSection />
@@ -25,6 +28,7 @@ const Index = () => {
       <FAQSection />
       <FormSection />
       <FinalCTASection onCtaClick={scrollToForm} />
+      <Footer />
     </div>
   );
 };
