@@ -1,4 +1,5 @@
 import { Target, Smartphone, DollarSign, CheckCircle, Zap, Handshake } from "lucide-react";
+import teamImage from "@/assets/team-advisory.jpg";
 
 export const DifferentialsSection = () => {
   const differentials = [
@@ -40,6 +41,14 @@ export const DifferentialsSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
           Por que escolher a Hall Assessoria?
         </h2>
+        
+        <div className="mb-12 max-w-3xl mx-auto">
+          <img 
+            src={teamImage} 
+            alt="Equipe de assessoria profissional da Hall" 
+            className="w-full h-auto rounded-lg shadow-xl"
+          />
+        </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {differentials.map((item, index) => {
