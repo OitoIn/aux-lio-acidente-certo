@@ -22,11 +22,17 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <HeroSection onCtaClick={scrollToForm} />
-      <BenefitSection />
+      <div id="beneficios">
+        <BenefitSection />
+      </div>
       <ProblemSolutionSection />
       <DifferentialsSection />
-      <TestimonialsSection />
-      <FAQSection />
+      <div id="depoimentos">
+        <TestimonialsSection />
+      </div>
+      <div id="faq">
+        <FAQSection />
+      </div>
       <FormSection />
       <FinalCTASection onCtaClick={scrollToForm} />
       <Footer />
