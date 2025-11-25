@@ -23,7 +23,7 @@ export const Footer = () => {
                 Política de Privacidade
               </Link>
               {" | "}
-              CNPJ: 00.000.000/0001-00
+              CNPJ: 26.227.032/0001-18
             </p>
             <p className="text-sm text-muted-foreground">
               Desenvolvido por{" "}
