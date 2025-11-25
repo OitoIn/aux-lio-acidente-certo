@@ -374,7 +374,16 @@ export const FormSection = () => {
                       onCheckedChange={(checked) => setFormData({ ...formData, autorizacao: checked as boolean })}
                     />
                     <Label htmlFor="autorizacao" className="font-normal cursor-pointer leading-tight">
-                      Sim, entendo que a Hall Assessoria entrará em contato por WhatsApp para confirmar meus dados e avaliar meu direito. <span className="text-destructive">*</span>
+                      Sim, entendo que a Hall Assessoria entrará em contato por WhatsApp para confirmar meus dados e avaliar meu direito. Li e concordo com a{" "}
+                      <a 
+                        href="/politica-de-privacidade" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline font-medium"
+                      >
+                        Política de Privacidade
+                      </a>
+                      . <span className="text-destructive">*</span>
                     </Label>
                   </div>
                 </div>

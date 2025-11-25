@@ -1,4 +1,5 @@
 import hallLogo from "@/assets/hall-logo.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -13,6 +14,16 @@ export const Footer = () => {
           <div className="text-center space-y-2">
             <p className="text-sm text-muted-foreground">
               Hall Assessoria - Todos os direitos reservados
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <Link 
+                to="/politica-de-privacidade" 
+                className="text-primary hover:underline font-medium"
+              >
+                Política de Privacidade
+              </Link>
+              {" | "}
+              CNPJ: 00.000.000/0001-00
             </p>
             <p className="text-sm text-muted-foreground">
               Desenvolvido por{" "}

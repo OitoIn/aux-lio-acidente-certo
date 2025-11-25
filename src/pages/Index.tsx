@@ -10,6 +10,7 @@ import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { CTAButton } from "@/components/CTAButton";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -41,6 +42,7 @@ const Index = () => {
       <FinalCTASection onCtaClick={scrollToForm} />
       <Footer />
       <WhatsAppButton />
+      <CookieBanner />
     </div>
   );
 };
