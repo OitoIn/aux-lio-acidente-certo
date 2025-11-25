@@ -9,6 +9,7 @@ import { FormSection } from "@/components/FormSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { CTAButton } from "@/components/CTAButton";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -25,8 +26,11 @@ const Index = () => {
       <div id="beneficios">
         <BenefitSection />
       </div>
+      <CTAButton onClick={scrollToForm} />
       <ProblemSolutionSection />
+      <CTAButton onClick={scrollToForm} />
       <DifferentialsSection />
+      <CTAButton onClick={scrollToForm} />
       <div id="depoimentos">
         <TestimonialsSection />
       </div>
