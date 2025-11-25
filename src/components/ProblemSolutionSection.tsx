@@ -1,10 +1,18 @@
 import { AlertCircle, CheckCircle } from "lucide-react";
 import problemSolutionImage from "@/assets/problem-solution.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const ProblemSolutionSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section className="py-16 md:py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="mb-12 max-w-4xl mx-auto">
           <img 
             src={problemSolutionImage} 

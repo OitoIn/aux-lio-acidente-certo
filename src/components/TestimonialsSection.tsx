@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const TestimonialsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const testimonials = [
     {
       text: "Com a ajuda da Hall, consegui meu benefício em poucos meses. Não sabia que tinha direito e agora recebo minha indenização todo mês. Muito obrigado!",
@@ -19,7 +22,12 @@ export const TestimonialsSection = () => {
 
   return (
     <section className="py-16 md:py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
           Histórias de Sucesso
         </h2>

@@ -1,8 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 import benefitsImage from "@/assets/benefits-worker.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const BenefitSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const benefits = [
     {
       title: "Benefício Indenizatório",
@@ -26,7 +29,12 @@ export const BenefitSection = () => {
 
   return (
     <section className="py-16 md:py-20 bg-secondary">
-      <div className="container mx-auto px-4">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
           O que é o Auxílio-Acidente?
         </h2>
