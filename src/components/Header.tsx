@@ -18,9 +18,6 @@ export const Header = () => {
               alt="Hall Assessoria" 
               className="h-12 md:h-16"
             />
-            <span className="text-xl md:text-2xl font-bold text-foreground">
-              Hall Assessoria
-            </span>
           </div>
           
           <nav className="hidden md:flex items-center gap-6">
