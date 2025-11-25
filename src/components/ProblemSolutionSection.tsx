@@ -1,9 +1,18 @@
 import { AlertCircle, CheckCircle } from "lucide-react";
+import problemSolutionImage from "@/assets/problem-solution.jpg";
 
 export const ProblemSolutionSection = () => {
   return (
     <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
+        <div className="mb-12 max-w-4xl mx-auto">
+          <img 
+            src={problemSolutionImage} 
+            alt="Do problema à solução com a Hall Assessoria" 
+            className="w-full h-auto rounded-lg shadow-xl"
+          />
+        </div>
+        
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="bg-destructive/10 border-l-4 border-destructive p-8 rounded-lg">
             <div className="flex items-start gap-3 mb-4">

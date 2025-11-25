@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import benefitsImage from "@/assets/benefits-worker.jpg";
 
 export const BenefitSection = () => {
   const benefits = [
@@ -29,6 +30,14 @@ export const BenefitSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
           O que é o Auxílio-Acidente?
         </h2>
+        
+        <div className="mb-12 max-w-3xl mx-auto">
+          <img 
+            src={benefitsImage} 
+            alt="Trabalhador confiante que conseguiu seus benefícios" 
+            className="w-full h-auto rounded-lg shadow-xl"
+          />
+        </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
