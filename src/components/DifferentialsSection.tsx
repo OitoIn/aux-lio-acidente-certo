@@ -1,7 +1,10 @@
 import { Target, Smartphone, DollarSign, CheckCircle, Zap, Handshake } from "lucide-react";
 import teamImage from "@/assets/team-advisory.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const DifferentialsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const differentials = [
     {
       icon: Target,
@@ -37,7 +40,12 @@ export const DifferentialsSection = () => {
 
   return (
     <section className="py-16 md:py-20 bg-secondary">
-      <div className="container mx-auto px-4">
+      <div 
+        ref={ref}
+        className={`container mx-auto px-4 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
           Por que escolher a Hall Assessoria?
         </h2>
